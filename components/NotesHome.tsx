@@ -30,7 +30,7 @@ const NotesHome = () => {
   const [selectedNoteId, setSelectedNoteId] = useState<NoteID | null>(null);
   const selectedNote = selectedNoteId ? notes[selectedNoteId] : null;
 
-  const addNewNote = useCallback((newNote: Partial<Note>) => {
+  const addNewNote = useCallback((newNote?: Partial<Note>) => {
     const id = uuidv4();
     setNotes((notes) => {
       return {
